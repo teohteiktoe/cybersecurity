@@ -29,7 +29,7 @@ def index():
         web = float(web)
         model = joblib.load('cybersecurity_model')
         pred = model.predict([[email, web]])
-        return(render_template("index.html", result="1"))
+        return(render_template("index.html", result=pred))
     else:
         return(render_template("index.html", result="2"))
 
